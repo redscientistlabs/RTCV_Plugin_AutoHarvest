@@ -142,6 +142,13 @@ namespace AUTOHARVEST.UI
             {
                 SyncObjectSingleton.FormExecute(() =>
                 {
+                    if (S.GET<StashHistoryForm>().lbStashHistory.Items.Count == 0)
+                        return;
+
+                    //select last item in stash
+                    S.GET<StashHistoryForm>().DontLoadSelectedStash = true;
+                    S.GET<StashHistoryForm>().lbStashHistory.SelectedIndex = S.GET<StashHistoryForm>().lbStashHistory.Items.Count - 1;
+                    //send to stockpile
                     S.GET<StashHistoryForm>().AddStashToStockpile(false);
                 });
             }

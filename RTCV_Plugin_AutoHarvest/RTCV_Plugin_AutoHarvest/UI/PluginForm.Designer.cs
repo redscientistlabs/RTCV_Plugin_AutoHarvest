@@ -56,7 +56,7 @@ namespace AUTOHARVEST.UI
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 32);
+            this.label1.Size = new System.Drawing.Size(148, 32);
             this.label1.TabIndex = 15;
             this.label1.Text = "Auto-Harvest";
             // 
@@ -145,7 +145,6 @@ namespace AUTOHARVEST.UI
             this.nmHarvestDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nmHarvestDelay.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.nmHarvestDelay.ForeColor = System.Drawing.Color.White;
-            this.nmHarvestDelay.Hexadecimal = true;
             this.nmHarvestDelay.Location = new System.Drawing.Point(312, 129);
             this.nmHarvestDelay.Minimum = new decimal(new int[] {
             1,
@@ -193,7 +192,6 @@ namespace AUTOHARVEST.UI
             this.nmCorruptionsToBeSent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nmCorruptionsToBeSent.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.nmCorruptionsToBeSent.ForeColor = System.Drawing.Color.White;
-            this.nmCorruptionsToBeSent.Hexadecimal = true;
             this.nmCorruptionsToBeSent.Location = new System.Drawing.Point(312, 192);
             this.nmCorruptionsToBeSent.Minimum = new decimal(new int[] {
             1,
