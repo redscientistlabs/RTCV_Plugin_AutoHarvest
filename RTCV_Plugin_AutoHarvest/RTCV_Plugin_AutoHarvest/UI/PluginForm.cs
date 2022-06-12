@@ -120,6 +120,25 @@ namespace AUTOHARVEST.UI
 
             SyncObjectSingleton.FormExecute(() =>
             {
+                if(cbRandomizeStates.Checked)
+                {
+                    //S.GET<SavestateManagerForm>().savestateList.LoadPreviousSavestateNow();
+                    
+
+                    var holders = S.GET<SavestateManagerForm>().savestateList.flowPanel.Controls
+                    .Cast<SavestateHolder>()
+                    .Where(it => it.HasState())
+                    .ToList();
+
+                    int chosenState = RtcCore.RND.Next(0, holders.Count());
+
+
+                    S.GET<SavestateManagerForm>().savestateList.SelectedHolder?.SetSelected(false);
+                    S.GET<SavestateManagerForm>().savestateList.SelectedHolder = holders[chosenState];
+                    S.GET<SavestateManagerForm>().savestateList.SelectedHolder?.SetSelected(true);
+
+                }
+
                 S.GET<GlitchHarvesterBlastForm>().loadBeforeOperation = true;
                 S.GET<GlitchHarvesterBlastForm>().Corrupt(null, null);
             });

@@ -45,6 +45,7 @@ namespace AUTOHARVEST.UI
             this.label2 = new System.Windows.Forms.Label();
             this.nmCorruptionsToBeSent = new RTCV.UI.Components.NumericUpDownHexFix();
             this.btnReplayCorruption = new System.Windows.Forms.Button();
+            this.cbRandomizeStates = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nmHarvestDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmCorruptionsToBeSent)).BeginInit();
             this.SuspendLayout();
@@ -225,12 +226,25 @@ namespace AUTOHARVEST.UI
             this.btnReplayCorruption.UseVisualStyleBackColor = false;
             this.btnReplayCorruption.Click += new System.EventHandler(this.btnReplayCorruption_Click);
             // 
+            // cbRandomizeStates
+            // 
+            this.cbRandomizeStates.AutoSize = true;
+            this.cbRandomizeStates.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cbRandomizeStates.ForeColor = System.Drawing.Color.White;
+            this.cbRandomizeStates.Location = new System.Drawing.Point(312, 35);
+            this.cbRandomizeStates.Name = "cbRandomizeStates";
+            this.cbRandomizeStates.Size = new System.Drawing.Size(112, 17);
+            this.cbRandomizeStates.TabIndex = 151;
+            this.cbRandomizeStates.Text = "Randomize States";
+            this.cbRandomizeStates.UseVisualStyleBackColor = true;
+            // 
             // PluginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(450, 250);
+            this.Controls.Add(this.cbRandomizeStates);
             this.Controls.Add(this.btnReplayCorruption);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nmCorruptionsToBeSent);
@@ -287,5 +301,6 @@ namespace AUTOHARVEST.UI
         private Label label2;
         private RTCV.UI.Components.NumericUpDownHexFix nmCorruptionsToBeSent;
         private Button btnReplayCorruption;
+        private CheckBox cbRandomizeStates;
     }
 }
